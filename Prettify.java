@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
 
-public class Format {
+public class Prettify {
 
 
     public void parsing_xml_with_array(String sa,ArrayList<String> string,int [] arr) {
@@ -26,8 +26,10 @@ public class Format {
                     index=string.indexOf(sa.substring(j,i+1));
                     arr[index]=3;
                     if(arr[index]==0){
-                        arr[index]=3;}
-                }else{
+                        arr[index]=3;
+                    }
+                }
+                else {
                     string.add(sa.substring(j,i+1));
 
                     index=string.indexOf(sa.substring(j,i+1));
@@ -64,10 +66,6 @@ public class Format {
         }
     }
 
-
-
-
-
     public  void Parse_error(ArrayList<String> string,int index,int []arr){
         String str;
         str=string.get(index);
@@ -79,14 +77,10 @@ public class Format {
         else{arr[index]=2;}
     }
 
-
-
-
-
     public  void writting(String input,StringBuilder output,int spaces,boolean flag){
 
 
-        if(flag==false){//openning tag
+        if(flag==false){ //openning tag
             output.append("\n");
             for(int i=0;i<spaces;i++){
                 output.append(" ");
@@ -109,14 +103,12 @@ public class Format {
         int x=0;
         if(string.size()>arr.length){max=arr.length;}
 
-        //for(int i=0;i<max;i++){System.out.print(arr[i]);}
         for(int i=0;i<max;i++){
 
             if(arr[i]==1){
                 indentation=indentation+3;
                 flag=false;
                 writting(string.get(i),output,indentation,flag);
-                //System.out.print(output);
             }else if(arr[i]==2){str=string.get(i);
                 if(str.length()>10){
                     flag=false;}else{flag=true;x=1;}
