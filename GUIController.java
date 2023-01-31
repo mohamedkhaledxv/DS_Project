@@ -130,6 +130,7 @@ public class GUIController {
         StringBuilder output2 = new StringBuilder();
         myformat.pretiffy(a, output, output2);
         String output3 = output2.toString();
+        output3 = output3.substring(output3.indexOf('\n')+1);
         formateed = output3;
         txt2.appendText(String.valueOf(output3));
         new File("Formatted.xml");
