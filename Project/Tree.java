@@ -1,12 +1,13 @@
+package com.example.guil;
 import java.util.ArrayList;
-public class tree
+public class Tree
 {
     private Node root;
-    tree(){
+    Tree(){
         root=null;
 
     }
-    tree(Node root)
+    Tree(Node root)
     {
         this.root=root;
     }
@@ -43,3 +44,17 @@ public class tree
     }
 
 }
+
+class count
+{
+
+    public  int counter ;
+
+    count (int a )
+    {
+        counter = a ;
+    }
+}
+
+
+
