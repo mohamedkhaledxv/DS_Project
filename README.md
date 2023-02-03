@@ -2,8 +2,8 @@
 # IMPORTANT NOTES
 
 1.Run the Program from "run.bat"
-   because it contains this command 
-   java --module-path "javafx-sdk-19\lib" --add-modules javafx.controls,javafx.fxml -jar p1andp2.jar 
+because it contains this command
+java --module-path "javafx-sdk-19\lib" --add-modules javafx.controls,javafx.fxml -jar p1andp2.jar 
 
 2. JDK 19 is used
 
