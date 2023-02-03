@@ -1,4 +1,4 @@
 # DS_Project
-#IMPORTANT NOTES
+# IMPORTANT NOTES
 -Java JDK-19
 -execute run.bat
