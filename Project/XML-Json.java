@@ -1,3 +1,5 @@
+package com.example.guil;
+
 public class xml2json {
     public static boolean dataisNumeric(String str)
     {
@@ -88,3 +90,4 @@ public class xml2json {
     }
 
 }
+
