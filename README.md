@@ -1,5 +1,5 @@
 # DS_Project
-# IMPORTANT NOTES
+### IMPORTANT NOTES
 
 1.Run the Program from "run.bat"
 because it contains this command
