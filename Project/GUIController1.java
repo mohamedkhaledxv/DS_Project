@@ -5,11 +5,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
 import java.util.Scanner ;
 
-public class GUIController {
+public class GUIController1 {
     @FXML
     private Label welcometext;
     @FXML
@@ -18,6 +23,7 @@ public class GUIController {
     StringBuffer str = new StringBuffer();
     ArrayList<String> fixError2 = new ArrayList<String>();
     ArrayList<Integer> lineOfError2 = new ArrayList<Integer>();
+
 
 
 
@@ -160,7 +166,7 @@ public class GUIController {
         Node.parsingtoarraylist(temp, xmllist);
         root.setNameOfTag(xmllist.get(0));
         count i=new count(1);
-        tree.filltree(root, xmllist, i);
+        Tree.filltree(root, xmllist, i);
         xml2json.convert(root,str);
         txt2.appendText(String.valueOf(str));
         new File("ToJSON.json");
@@ -179,6 +185,21 @@ public class GUIController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    protected void graphbutton() throws IOException {    //button by which opens new stage of graph and SNA (Phase 2)
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("hello-view2.fxml"));
+        Parent root=fxmlLoader.load();
+        Stage stage = new Stage();
+        Scene s=new Scene(root);
+        stage.setScene(s);
+        stage.setResizable(true);
+        stage.setTitle("Graph and SNA");
+        stage.show();
+
+    }
+
+
 }
 
 
